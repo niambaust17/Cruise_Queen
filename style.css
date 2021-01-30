@@ -128,3 +128,6 @@ a.active {
 p span {
   cursor: pointer;
 }
+#booking-info {
+  display: none;
+}
