@@ -1,3 +1,4 @@
+// if user increment or decrement by plus or minus sign
 function countTicket(className, isIncrement)
 {
     const specificTicketCount = getInputValue(className);
@@ -11,6 +12,12 @@ function countTicket(className, isIncrement)
         specificTicketCountNew = specificTicketCountNew - 1;
     }
     document.getElementById(className + '-count').value = specificTicketCountNew;
+    ticketPriceCalculation();
+}
+
+// if user increment or decrement from input tag
+function countTicketInputField(className)
+{
     ticketPriceCalculation();
 }
 
@@ -28,7 +35,7 @@ function ticketPriceCalculation()
     document.getElementById('vat').innerText = '$' + vat;
     document.getElementById('total-price').innerText = '$' + total;
 
-    // display user the summary of buying ticket after buying
+    // display user the summary after buying ticket
     document.getElementById('displayQuantityFirst').innerText = totalFirstClass;
     document.getElementById('displayQuantityEconomy').innerText = totalEconomyClass;
     document.getElementById('displayTotalFirst').innerText = '$' + totalFirstClass * 150;
